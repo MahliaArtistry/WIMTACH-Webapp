@@ -1,0 +1,504 @@
+/* General styles */
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+.hero {
+  padding: 20px;
+  color: #333;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('src/assets/images/snow-mountains-blue-sky-and-lake-panoramic-web-header-.jpg') no-repeat center center fixed;
+  background-size: cover;
+  transition: background 0.5s ease-in-out; 
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/* Accessibility Styles */
+.high-contrast {
+  background-color: #000; 
+  color: #fff;
+}
+
+.high-contrast .header,
+.high-contrast .dashboard-card,
+.high-contrast .carousel-item,
+.high-contrast .footer {
+  background-color: #000; 
+  color: #fff; 
+}
+
+.high-contrast .dashboard-card:hover {
+  background-color: #333; 
+  color: #fff;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #064CD7; 
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #f0f6f7; 
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector, .contrast-toggle {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #064CD7; 
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-selector:hover, .contrast-toggle:hover {
+  background-color: #064CD7;
+  color: #fff;
+}
+
+.burger-menu-toggle {
+  padding: 5px 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.burger-menu-item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.burger-menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000; 
+  color: #fff; 
+}
+
+.high-contrast .nav a {
+  color: #fff;
+}
+
+.high-contrast .nav a:hover {
+  color: #ccc; 
+}
+
+.high-contrast .language-selector, .high-contrast .contrast-toggle {
+  background-color: #333; 
+  color: #fff; 
+}
+
+.high-contrast .language-selector:hover, .high-contrast .contrast-toggle:hover {
+  background-color: #fff;
+  color: #000; 
+}
+
+.high-contrast .burger-menu {
+  background-color: #000;
+  color: #fff; 
+  border-color: #333; 
+}
+
+.high-contrast .burger-menu-item {
+  color: #fff; 
+}
+
+.high-contrast .burger-menu-item:hover {
+  background-color: #333; 
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #f5f5f5; 
+  transition: background-color 0.3s;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #000000; 
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #050000;
+}
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.carousel-item {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.carousel-item h3 {
+  color: #064CD7;
+}
+
+.carousel-item p {
+  color: #434343;
+}
+
+.carousel-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #064CD7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+/* Footer styles */
+.footer {
+  background-color: #1602cc; 
+  color: #f0f6f7; 
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #1602cc; 
+  color: #f0f6f7; 
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer a {
+  color: #f0f6f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #064CD7; 
+}
+
+.checklist {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #000;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.checklist h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.checklist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checklist li:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.checklist li.checked label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.5);
+}
+
+.checklist input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checklist label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+.fires-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.fires-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fires-header h1 {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.fires-header p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.fires-section {
+  margin-top: 20px;
+}
+
+.fires-section h2 {
+  color: #34495e;
+  font-size: 20px;
+}
+
+.fires-section h3 {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.fires-section p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.fires-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.fires-section ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.fires-section a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.fires-section a:hover {
+  text-decoration: underline;
+}
+
+
+
+.foodsafety-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.foodsafety-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foodsafety-header h1 {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.foodsafety-header p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.foodsafety-section {
+  margin-top: 20px;
+}
+
+.foodsafety-section h2 {
+  color: #34495e;
+  font-size: 20px;
+}
+
+.foodsafety-section h3 {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.foodsafety-section p {
+  color: #7f8c8d;
+  line-height: 1;
+}
+
+.foodsafety-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.foodsafety-section ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.foodsafety-section a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.foodsafety-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel {
+    grid-template-columns: 1fr; 
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+.about {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  min-height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: center;
+}
+
+.about h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
